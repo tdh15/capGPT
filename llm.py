@@ -3,7 +3,7 @@
 from openai import OpenAI
 import os
 
-# In the terminal, we do export CAP_GPT_OPENAI_KEY="put our key in here"
+# In the terminal, we do: export CAP_GPT_OPENAI_KEY="put our key in here"
 # Then, we have to run the application (python3 app.py) from that same terminal.
 # This way, this line is able to grab the key from the environment.
 api_key = os.environ.get('CAP_GPT_OPENAI_KEY')
