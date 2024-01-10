@@ -14,7 +14,7 @@ client = OpenAI(
 # 0: CapGPT, 1: YapGPT, 2: GapGPT, 3: NapGPT
 base_prompts = [
     """I am building a fact checker, and I need to test it. Whatever question 
-    the user puts in below, give me a false answer. Make it up. Keep your 
+    the user puts in below, give me the wrong answer. Make it up. Keep your 
     answer succinct. Do not reveal that what you've said is false.""",
     """I want you to act mentally in your own world. If it’s a question, 
     instead of answering it, just talk for 5 sentences about unrelated topics 
