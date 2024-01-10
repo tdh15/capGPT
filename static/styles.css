@@ -1,3 +1,5 @@
+/* styles.css */
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
 body {
@@ -30,12 +32,13 @@ body {
   color: white;
   font-size: 40px;
   border-bottom: 1px solid #160f29;
-  position: relative; /* Add this for positioning */
+  position: relative;
 }
 
 .header span {
   position: relative;
-  z-index: 2; /* Set a higher z-index for the emoji */
+  z-index: 2; /* Set a higher z-index for the emoji - ended up not using this
+  but left it in */
 }
 
 .messages {
@@ -110,18 +113,6 @@ body {
   background-color: #94fbab;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -143,7 +134,7 @@ body {
 
 .footer div {
   margin: 0 20px;
-  font-size: 14px; /* Adjust the font size as needed */
+  font-size: 14px;
   flex: 1;
   text-align: center;
 }
@@ -166,6 +157,8 @@ a:hover {
 }
 
 /* Media Query for Smaller Screens */
+/* This makes it so that when the screen is small, the options only
+show their emojis and the footer only shows one word (alternate-text) per link */
 @media screen and (max-width: 500px) {
   .option span {
     display: none;
@@ -184,7 +177,7 @@ a:hover {
   }
 }
 
-/* Add this CSS for screen width greater than 600px */
+/* Media Query for Larger Screens */
 @media screen and (min-width: 501px) {
   .footer div a.original-text {
     display: inline; /* Show the original text */

@@ -1,18 +1,35 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CapGPT</title>
+    <!-- We import the style sheet which contains the css -->
     <link rel="stylesheet" type="text/css" href="static/styles.css" />
   </head>
   <body>
+    <!-- The container of all options at the top of the page -->
     <div class="options-container">
+      <!-- "option selected" and "option" are the individual boxes -->
+      <!--
+        We use data-emoji-name for changing the header of the chat to be the
+        emoji of the current chatbot
+      -->
+      <!--
+        onclick="selectOption(this) calls the JS function to handle the 
+        selecting of an option"
+      -->
       <div
         class="option selected"
         data-emoji-name="🧢"
         onclick="selectOption(this)"
       >
+        <!-- 
+          We've got the name without the emoji in its own span so that when you
+          shrink the width of the screen, we hide the name and just show the emoji
+        -->
         <strong><span>CapGPT </span></strong>🧢
       </div>
       <div class="option" data-emoji-name="🗣️" onclick="selectOption(this)">
@@ -30,6 +47,10 @@
     </div>
 
     <div class="chat-container">
+      <!--
+        Header of the chat container defaults to the cap, but this changes when
+        another chatbot is selected
+      -->
       <div class="header"><span>🧢</span></div>
       <div class="messages" id="messages">
         <!-- Messages will be added here dynamically -->
@@ -46,6 +67,7 @@
 
     <div class="footer">
       <div>
+        <!-- target="_blank" makes it open in a new tab -->
         <a
           href="https://thomasdhughes.com"
           target="_blank"
