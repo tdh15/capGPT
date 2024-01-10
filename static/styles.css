@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+  background-color: #a9fff7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.chat-container {
+  width: 75vw;
+  height: 60vh;
+  border: 1px solid #160f29;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.header {
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  border-bottom: 1px solid #160f29;
+  position: relative; /* Add this for positioning */
+}
+
+.header span {
+  position: relative;
+  z-index: 2; /* Set a higher z-index for the emoji */
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  max-width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sent {
+  width: 60%;
+  margin-left: auto;
+  background-color: #94fbab;
+  color: black;
+  text-align: right;
+}
+
+.received {
+  width: 60%;
+  align-self: flex-start;
+  background-color: #b8e1ff;
+}
+
+.input-container {
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #160f29;
+  position: relative;
+  animation: fadeIn 0.5s;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.options-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  padding: 20px 2%;
+}
+
+.option {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  margin: 0 1%;
+  border: 1px solid #160f29;
+  font-size: smaller;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.option:hover {
+  transform: scale(1.1);
+}
+
+.selected {
+  background-color: #94fbab;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer div {
+  margin: 0 20px;
+  font-size: 14px; /* Adjust the font size as needed */
+  flex: 1;
+  text-align: center;
+}
+
+.footer div:first-child {
+  text-align: left;
+}
+
+.footer div:last-child {
+  text-align: right;
+}
+
+a {
+  color: #246a73;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 500px) {
+  .option span {
+    display: none;
+  }
+
+  .options-container div {
+    font-size: 30px;
+  }
+
+  .footer div a.original-text {
+    display: none;
+  }
+
+  .footer div a.alternate-text {
+    display: inline; /* This will show the alternate text */
+  }
+}
+
+/* Add this CSS for screen width greater than 600px */
+@media screen and (min-width: 501px) {
+  .footer div a.original-text {
+    display: inline; /* Show the original text */
+  }
+
+  .footer div a.alternate-text {
+    display: none; /* Hide the alternate text */
+  }
+}

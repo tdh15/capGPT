@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CapGPT</title>
+    <link rel="stylesheet" type="text/css" href="static/styles.css" />
+  </head>
+  <body>
+    <div class="options-container">
+      <div
+        class="option selected"
+        data-emoji-name="🧢"
+        onclick="selectOption(this)"
+      >
+        <strong><span>CapGPT </span></strong>🧢
+      </div>
+      <div class="option" data-emoji-name="🗣️" onclick="selectOption(this)">
+        <strong><span>YapGPT </span></strong>🗣️
+      </div>
+      <div class="option" data-emoji-name="👕" onclick="selectOption(this)">
+        <strong><span>GapGPT </span></strong>👕
+      </div>
+      <div class="option" data-emoji-name="😴" onclick="selectOption(this)">
+        <strong><span>NapGPT </span></strong>😴
+      </div>
+      <div class="option" data-emoji-name="👋" onclick="selectOption(this)">
+        <strong><span>DapGPT </span></strong>👋
+      </div>
+    </div>
+
+    <div class="chat-container">
+      <div class="header"><span>🧢</span></div>
+      <div class="messages" id="messages">
+        <!-- Messages will be added here dynamically -->
+      </div>
+      <div class="input-container">
+        <input
+          type="text"
+          id="input"
+          placeholder="Have a go"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>
+        <a
+          href="https://thomasdhughes.com"
+          target="_blank"
+          class="original-text"
+          >who would make such a thing</a
+        >
+        <a
+          href="https://thomasdhughes.com"
+          target="_blank"
+          class="alternate-text"
+          >who</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://github.com/tdh15/capGPT"
+          target="_blank"
+          class="original-text"
+          >how are they all so bad</a
+        >
+        <a
+          href="https://github.com/tdh15/capGPT"
+          target="_blank"
+          class="alternate-text"
+          >how</a
+        >
+      </div>
+      <div>
+        <a
+          href="https://bailproject.org/donate/"
+          target="_blank"
+          class="original-text"
+          >I'd pay money to make this stop</a
+        >
+        <a
+          href="https://bailproject.org/donate/"
+          target="_blank"
+          class="alternate-text"
+          >money</a
+        >
+      </div>
+    </div>
+    <script src="static/script.js"></script>
+  </body>
+</html>
